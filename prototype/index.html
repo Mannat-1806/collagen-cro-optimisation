@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wellbeing Nutrition | Pure Korean Marine Collagen Peptides (CRO Prototype)</title>
+  <meta name="description" content="Academic CRO Prototype: Wellbeing Nutrition Pure Korean Marine Collagen Peptides. Hydrolyzed Type I & III Marine Peptides with transparent unit cost and pre-purchase guidance.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Experiment Preview & Variant Switcher Bar -->
+  <aside class="experiment-banner" aria-label="Prototype Experiment Controls">
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <span class="badge">CRO Prototype</span>
+      <span>A/B Experiment Preview Mode: <strong id="current-variant-label">Unit-Pricing Variant</strong></span>
+    </div>
+    <div class="experiment-switcher">
+      <span>Switch View:</span>
+      <button type="button" class="variant-btn" id="btn-toggle-control" data-variant="control">Control (Hide Unit Cost)</button>
+      <button type="button" class="variant-btn active" id="btn-toggle-variant" data-variant="unit_pricing">Variant B (Show Price/Serving)</button>
+    </div>
+  </aside>
+
+  <!-- Store Announcement Top Bar -->
+  <div class="announcement-bar">
+    <span>Free Express Pan-India Shipping on Orders Over ₹999 | Code: <strong>BUY3@10</strong> for Extra 10% on 3+ Packs</span>
+  </div>
+
+  <!-- Global Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-logo" aria-label="Wellbeing Nutrition Home">
+        <span class="brand-logo-text">Wellbeing Nutrition</span>
+        <span class="brand-logo-sub">Pure Korean Marine Collagen</span>
+      </a>
+
+      <nav class="header-nav" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link">Product</a>
+        <a href="#preparation" class="nav-link">How to Use</a>
+        <a href="#evidence" class="nav-link">Clinical Evidence</a>
+        <a href="#reviews" class="nav-link">Reviews (571)</a>
+        <a href="#starter-concept" class="nav-link">Starter Trial</a>
+        <a href="#guide" class="nav-link">Product Guide AI</a>
+        <a href="#faq" class="nav-link">FAQs</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="cart-btn" id="btn-open-cart" aria-label="View Shopping Cart">
+          <span>🛒 Cart</span>
+          <span class="cart-count" id="header-cart-count">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb Navigation -->
+  <div class="container">
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#hero">Collagen &amp; Skin Peptides</a></li>
+        <li><a href="#hero">Marine Collagen</a></li>
+        <li><span aria-current="page">Pure Korean Marine Collagen Peptides</span></li>
+      </ol>
+    </nav>
+  </div>
+
+  <!-- MAIN PRODUCT HERO & PURCHASE AREA (INTERVENTION 1) -->
+  <main id="hero" class="product-hero">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left: Gallery Component -->
+        <section class="gallery-wrapper" aria-label="Product Media Gallery">
+          <div class="main-image-container">
+            <span class="gallery-provenance-tag">🇰🇷 100% Korean Deep-Sea Sourced</span>
+            <img id="main-product-img" class="main-image" src="assets/marine-p1.jpg" alt="Wellbeing Nutrition Pure Korean Marine Collagen Peptides 200g Tub with 8g Scoop">
+          </div>
+
+          <div class="thumbnails-row" role="tablist" aria-label="Thumbnail Image Selector">
+            <button type="button" class="thumbnail-btn active" role="tab" aria-selected="true" data-index="0" data-src="assets/marine-p1.jpg" aria-label="View product pack front">
+              <img src="assets/marine-p1.jpg" alt="Thumbnail front pack">
+            </button>
+            <button type="button" class="thumbnail-btn" role="tab" aria-selected="false" data-index="1" data-src="assets/bop-nutritional.jpg" aria-label="View nutritional information panel">
+              <img src="assets/bop-nutritional.jpg" alt="Thumbnail back of pack">
+            </button>
+            <button type="button" class="thumbnail-btn" role="tab" aria-selected="false" data-index="2" data-src="assets/how-to-use.jpg" aria-label="View 3-step preparation guide">
+              <img src="assets/how-to-use.jpg" alt="Thumbnail usage guide">
+            </button>
+            <button type="button" class="thumbnail-btn" role="tab" aria-selected="false" data-index="3" data-src="assets/marine-p2.jpg" aria-label="View Pack of 2 routine bundle">
+              <img src="assets/marine-p2.jpg" alt="Thumbnail pack of 2">
+            </button>
+          </div>
+
+          <!-- Sensory Reassurance Strip -->
+          <div class="sensory-strip" aria-label="Sensory Characteristics Reassurance">
+            <div class="sensory-item">
+              <span>☕ Neutral in Coffee &amp; Tea</span>
+            </div>
+            <div class="sensory-item">
+              <span>⏱️ Dissolves in 20–30s</span>
+            </div>
+            <div class="sensory-item">
+              <span>🚫 Zero Added Sugar</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right: Buy Box & Purchasing Controls -->
+        <section class="buy-box" aria-label="Purchase Controls and Pack Selection">
+          
+          <div class="product-badges">
+            <div class="dietary-badge" title="Contains pure fish collagen peptides">
+              <span class="dietary-dot"></span>
+              <span>Non-Vegetarian (Marine Fish)</span>
+            </div>
+            <div class="social-proof-header">
+              <span class="star-rating">★ 4.74</span>
+              <a href="#reviews" class="review-link" id="hero-reviews-link">(571 Verified Reviews)</a>
+            </div>
+          </div>
+
+          <div>
+            <h1 class="product-title" id="pdp-title">Pure Korean Marine Collagen Peptides</h1>
+            <p class="product-subtitle" id="pdp-subtitle">
+              Hydrolyzed Type I &amp; III Marine Peptides (8 g per serving) to support skin hydration, hair strength &amp; joint support.
+            </p>
+          </div>
+
+          <div class="product-meta-specs">
+            <span class="spec-pill">200 g Tub</span>
+            <span class="spec-pill">25 Servings (8 g Scoop)</span>
+            <span class="spec-pill">Unflavored Powder</span>
+            <span class="spec-pill">Shelf Life: 24 Months</span>
+          </div>
+
+          <!-- Pack Sizing & Duration Selector -->
+          <div class="selector-header">
+            <span class="selector-label">Select Pack &amp; Duration:</span>
+            <span class="reference-pricing-disclaimer">*Captured reference prices</span>
+          </div>
+
+          <div class="packs-grid" role="radiogroup" aria-label="Pack options">
+            
+            <!-- Pack 1 -->
+            <div class="pack-card selected" role="radio" aria-checked="true" tabindex="0" data-pack-id="pack_1">
+              <div class="pack-card-top">
+                <span class="pack-title">Pack of 1</span>
+                <span class="pack-discount-pill">Save 3%</span>
+              </div>
+              <div class="pack-pricing">
+                <span class="pack-price">₹1,745</span>
+                <span class="pack-mrp">₹1,799</span>
+              </div>
+              <!-- Dynamically shown/hidden in A/B test -->
+              <div class="pack-unit-price-box unit-pricing-element">
+                <span class="unit-price-highlight">₹69.80 / serving</span>
+                <span class="servings-count">25 Servings</span>
+              </div>
+            </div>
+
+            <!-- Pack 2 (Popular) -->
+            <div class="pack-card" role="radio" aria-checked="false" tabindex="0" data-pack-id="pack_2">
+              <span class="popular-ribbon">Most Popular</span>
+              <div class="pack-card-top">
+                <span class="pack-title">Pack of 2</span>
+                <span class="pack-discount-pill">Save 5%</span>
+              </div>
+              <div class="pack-pricing">
+                <span class="pack-price">₹3,418</span>
+                <span class="pack-mrp">₹3,598</span>
+              </div>
+              <div class="pack-unit-price-box unit-pricing-element">
+                <span class="unit-price-highlight">₹68.36 / serving</span>
+                <span class="servings-count">50 Servings</span>
+              </div>
+            </div>
+
+            <!-- Pack 3 -->
+            <div class="pack-card" role="radio" aria-checked="false" tabindex="0" data-pack-id="pack_3">
+              <div class="pack-card-top">
+                <span class="pack-title">Pack of 3</span>
+                <span class="pack-discount-pill">Save 7%</span>
+              </div>
+              <div class="pack-pricing">
+                <span class="pack-price">₹5,019</span>
+                <span class="pack-mrp">₹5,397</span>
+              </div>
+              <div class="pack-unit-price-box unit-pricing-element">
+                <span class="unit-price-highlight">₹66.92 / serving</span>
+                <span class="servings-count">75 Servings</span>
+              </div>
+            </div>
+
+            <!-- Pack 4 -->
+            <div class="pack-card" role="radio" aria-checked="false" tabindex="0" data-pack-id="pack_4">
+              <div class="pack-card-top">
+                <span class="pack-title">Pack of 4</span>
+                <span class="pack-discount-pill">Save 10%</span>
+              </div>
+              <div class="pack-pricing">
+                <span class="pack-price">₹6,476</span>
+                <span class="pack-mrp">₹7,196</span>
+              </div>
+              <div class="pack-unit-price-box unit-pricing-element">
+                <span class="unit-price-highlight">₹64.76 / serving</span>
+                <span class="servings-count">100 Servings</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="cta-group">
+            <button type="button" class="btn-primary-add" id="btn-hero-add-to-cart">
+              <span>Add to Cart — </span>
+              <span id="hero-cta-price">₹1,745</span>
+            </button>
+            <button type="button" class="btn-gokwik-buy" id="btn-hero-gokwik-buy">
+              <span>⚡ 1-Click Checkout via GoKwik</span>
+            </button>
+          </div>
+
+          <!-- Purchase Protection Micro-copy -->
+          <div class="trust-points-strip">
+            <div class="trust-item">
+              <span>🛡️ Tamper-Evident Foil Sealed</span>
+            </div>
+            <div class="trust-item">
+              <span>🔄 48-Hr Transit Damage Replacement</span>
+            </div>
+            <div class="trust-item">
+              <span>🚚 Ships within 24 Hours</span>
+            </div>
+            <div class="trust-item">
+              <span>📜 FSSAI Lic. 10019022009134</span>
+            </div>
+          </div>
+
+          <!-- Product Guide Prompt Card -->
+          <div class="guide-hero-card">
+            <div class="guide-hero-text">
+              <h4>Have questions before buying?</h4>
+              <p>Ask about coffee mixability, age suitability, or seafood precautions.</p>
+            </div>
+            <button type="button" class="guide-ask-btn" id="btn-hero-open-guide">💬 Ask Guide</button>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- MODULE 2: AT-A-GLANCE PRODUCT SPECIFICATIONS -->
+  <section class="at-a-glance-section" aria-label="Key Product Specifications">
+    <div class="container">
+      <div class="glance-grid">
+        <div class="glance-card">
+          <span class="glance-icon">🐟</span>
+          <h4>Korean Deep-Sea Origin</h4>
+          <p>Sourced from wild-caught marine fish skin and scales in South Korea.</p>
+        </div>
+        <div class="glance-card">
+          <span class="glance-icon">⚡</span>
+          <h4>8 g Peptides Per Scoop</h4>
+          <p>Hydrolyzed Type I (90%) and Type III (10%) for high bio-availability.</p>
+        </div>
+        <div class="glance-card">
+          <span class="glance-icon">☕</span>
+          <h4>100% Unflavored</h4>
+          <p>Zero added sugars, sweeteners, or chemical fillers. Mixes into any drink.</p>
+        </div>
+        <div class="glance-card">
+          <span class="glance-icon">🌿</span>
+          <h4>Clean Dietary Formula</h4>
+          <p>Gluten-free, dairy-free, keto-friendly, with verified 24-month shelf life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE 3: PREPARATION & MIXABILITY GUIDE -->
+  <section id="preparation" class="preparation-section" aria-label="Preparation and Daily Routine Instructions">
+    <div class="container">
+      <div class="section-heading-wrapper">
+        <span class="section-tag">Daily Integration</span>
+        <h2 class="section-title">How to Prepare &amp; What to Expect</h2>
+        <p class="section-subtitle">A seamless 3-step morning ritual designed for hot coffee, tea, water, or smoothies.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <h4>Scoop &amp; Measure</h4>
+          <p>Add 1 level scoop (8 g, included inside the tub) into your empty mug or glass.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <h4>Pour &amp; Stir</h4>
+          <p>Pour 200–250 ml of warm coffee, green tea, or room-temperature liquid. Stir briskly for 20–30 seconds until clear.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <h4>Enjoy Daily</h4>
+          <p>Consume once daily in the morning or between meals. Consistency over 4 to 8 weeks is essential for results.</p>
+        </div>
+      </div>
+
+      <div class="preparation-disclosure-box">
+        <strong>Sensory Transparency Note:</strong> Pure marine collagen hydrolysate is naturally neutral when dissolved into coffee, tea, or citrus juices. When consumed in plain room-temperature water, some sensitive palates detect a mild marine mineral note. If preparing with ice-cold beverages, use a frother or shaker cup to prevent settling.
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE 4: CLINICAL EVIDENCE AT A GLANCE -->
+  <section id="evidence" class="evidence-section" aria-label="Published Scientific Evidence on Collagen Peptides">
+    <div class="container">
+      <div class="section-heading-wrapper">
+        <span class="section-tag">Scientific Substantiation</span>
+        <h2 class="section-title">Evidence at a Glance</h2>
+        <p class="section-subtitle">Summary of published, peer-reviewed clinical trials evaluating oral marine collagen peptides.</p>
+      </div>
+
+      <div class="evidence-grid" id="evidence-cards-container">
+        <!-- Rendered dynamically from PRODUCT_DATA.clinicalStudies -->
+      </div>
+
+      <div class="evidence-disclaimer-callout">
+        <strong>Important Regulatory &amp; Scientific Disclosure:</strong> The citations above refer to published randomized, placebo-controlled human clinical trials on oral hydrolyzed collagen peptide ingredients. They do not constitute a clinical trial conducted exclusively on this specific finished packaged product. Visible physiological results depend on age, diet, hydration, and daily routine adherence.
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE 5: DETAILED VERIFIED REVIEW DISCOVERY (INTERVENTION 3) -->
+  <section id="reviews" class="reviews-section" aria-label="Customer Reviews Explorer">
+    <div class="container">
+      
+      <!-- Summary Block -->
+      <div class="reviews-summary-header">
+        <div class="reviews-rating-block">
+          <div class="big-rating-number">4.74</div>
+          <div class="rating-stars-stacked">
+            <span class="stars">★★★★★</span>
+            <span class="verified-counter">Based on 571 Verified Customer Reviews (Judge.me Platform Reference)</span>
+          </div>
+        </div>
+        <div class="illustrative-disclosure-tag">
+          <strong>Evaluation Disclosure:</strong> The 4.74 rating is captured reference data. Individual review cards below form an illustrative demo dataset created to demonstrate keyword search, multi-factor filtering, and negative review discovery.
+        </div>
+      </div>
+
+      <!-- Controls: Search, Filter, Sort -->
+      <div class="reviews-controls-bar">
+        <input type="search" id="review-search-input" class="review-search-input" placeholder="Search reviews by keyword (e.g., 'coffee', 'smell', 'nails')..." aria-label="Search customer reviews">
+
+        <div class="review-filters-group" role="group" aria-label="Filter reviews by mix routine">
+          <button type="button" class="filter-pill active" data-filter-type="mix" data-value="all">All Routines</button>
+          <button type="button" class="filter-pill" data-filter-type="mix" data-value="In Morning Coffee">In Morning Coffee</button>
+          <button type="button" class="filter-pill" data-filter-type="mix" data-value="In Water">In Water</button>
+          <button type="button" class="filter-pill" data-filter-type="mix" data-value="In Smoothies / Juice">In Smoothies</button>
+        </div>
+
+        <select id="review-sort-select" class="reviews-sort-select" aria-label="Sort customer reviews">
+          <option value="helpful">Sort: Most Helpful First</option>
+          <option value="recent">Sort: Most Recent First</option>
+          <option value="highest">Sort: Highest Rated (5★)</option>
+          <option value="critical">Sort: Critical Reviews (1–2★)</option>
+        </select>
+      </div>
+
+      <!-- Dynamic Review Cards List -->
+      <div class="reviews-list" id="reviews-list-container" aria-live="polite">
+        <!-- Injected via JavaScript from REVIEWS_DEMO_DATA -->
+      </div>
+
+      <!-- Pagination -->
+      <nav class="pagination-row" id="reviews-pagination" aria-label="Reviews pagination">
+        <!-- Page buttons injected via JS -->
+      </nav>
+
+    </div>
+  </section>
+
+  <!-- MODULE 6: VALUE & SIZING COMPARISON -->
+  <section class="comparison-section" aria-label="Pack Value Comparison">
+    <div class="container">
+      <div class="section-heading-wrapper">
+        <span class="section-tag">Value Transparency</span>
+        <h2 class="section-title">Pack Sizing &amp; Duration Comparison</h2>
+        <p class="section-subtitle">Clear breakdown of servings, daily costs, and multi-pack savings.</p>
+      </div>
+
+      <div class="comparison-table-wrapper">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th scope="col">Option</th>
+              <th scope="col">Net Weight</th>
+              <th scope="col">Servings</th>
+              <th scope="col">Reference Price</th>
+              <th scope="col" class="highlight-col">Price / Serving</th>
+              <th scope="col">Estimated Duration</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="comparison-table-body">
+            <!-- Rendered from PRODUCT_DATA.packs -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE 7: PROPOSED STARTER PACK CONCEPT (INTERVENTION 4) -->
+  <section id="starter-concept" class="starter-concept-section" aria-label="Proposed 14-Serving Starter Pack Evaluation Concept">
+    <div class="container">
+      <div class="starter-card-wrapper">
+        <div>
+          <span class="concept-badge">Proposed Concept for Evaluation</span>
+          <h3>14-Day Taste &amp; Routine Starter Pack</h3>
+          <p>
+            Uncertain about taste, mixability, or habit fit? This proposed 14-serving evaluation kit lets you experience our unflavored Korean marine hydrolysate in your daily routine with minimal upfront commitment.
+          </p>
+          <ul class="concept-features-list">
+            <li>✓ 14 individual daily servings (112 g total) of pure Type I &amp; III peptides</li>
+            <li>✓ Test dissolvability in your morning coffee, tea, or smoothie</li>
+            <li>✓ Confirm digestive comfort before committing to a full 200 g tub</li>
+            <li>✓ Includes a simulated <strong>₹200 repeat voucher</strong> valid on your next 200 g tub</li>
+          </ul>
+        </div>
+
+        <div class="concept-action-box">
+          <div class="concept-pricing-row">
+            <div>
+              <span class="concept-price">₹999</span>
+              <span class="concept-per-serving">(₹71.35 / serving)</span>
+            </div>
+            <span style="font-size: 0.75rem; color: #5EEAD4; font-weight: 700;">+ ₹200 Voucher</span>
+          </div>
+
+          <button type="button" class="btn-simulate-starter" id="btn-simulate-starter-pack">
+            Simulate Starter Pack Action
+          </button>
+
+          <p class="concept-disclaimer-note">
+            <strong>Prototype Disclaimer:</strong> This starter kit is an evaluated CRO concept. SKU production, packaging feasibility, and voucher terms require formal business and supply-chain sign-off. Not an active purchasable item on the live store.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE 8: PRODUCT GUIDE AI ASSISTANT (INTERVENTION 2) -->
+  <section id="guide" class="product-guide-section" aria-label="Pre-Purchase Interactive Product Guide">
+    <div class="container">
+      <div class="section-heading-wrapper">
+        <span class="section-tag">Interactive Assistance</span>
+        <h2 class="section-title">Pre-Purchase Product Guide</h2>
+        <p class="section-subtitle">Get instant answers grounded in our verified product knowledge base. Zero automated medical claims.</p>
+      </div>
+
+      <div class="guide-embed-container">
+        <div class="guide-header-bar">
+          <div class="guide-title-lockup">
+            <div class="guide-avatar">🤖</div>
+            <div>
+              <h4>Collagen Product Assistant</h4>
+              <p>Grounded in verified packaging &amp; FSSAI regulatory specifications</p>
+            </div>
+          </div>
+          <span class="guide-safety-tag">Deterministic Local Engine</span>
+        </div>
+
+        <div class="guide-chat-body" id="embedded-chat-body" aria-live="polite">
+          <div class="message-bubble assistant">
+            Hello! I am your pre-purchase guide for Wellbeing Nutrition Pure Korean Marine Collagen Peptides. Ask me anything about coffee mixability, ingredients, serving instructions, age recommendations, or return terms.
+          </div>
+        </div>
+
+        <!-- Quick Question Chips -->
+        <div class="guide-chips-scroll" id="embedded-guide-chips" aria-label="Suggested questions">
+          <button type="button" class="guide-chip" data-query="Can I mix it in hot black coffee or tea?">Coffee mixability?</button>
+          <button type="button" class="guide-chip" data-query="Does it taste or smell fishy?">Does it taste fishy?</button>
+          <button type="button" class="guide-chip" data-query="What exactly is in this product and where is it sourced?">Ingredients &amp; Sourcing?</button>
+          <button type="button" class="guide-chip" data-query="Is this suitable for vegetarians or people with seafood allergies?">Fish/Seafood Allergy?</button>
+          <button type="button" class="guide-chip" data-query="Who can use this supplement, and what is the recommended age?">Age Suitability?</button>
+          <button type="button" class="guide-chip" data-query="What is the return and refund policy?">Return Policy?</button>
+        </div>
+
+        <!-- Input Bar -->
+        <form class="guide-input-bar" id="embedded-guide-form">
+          <input type="text" class="guide-input-field" id="embedded-guide-input" placeholder="Ask a question about ingredients, routine, or safety..." aria-label="Type your product question">
+          <button type="submit" class="guide-send-btn">Send</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE 9: RETURN POLICY, STORAGE & SAFETY ADVISORY -->
+  <section class="policy-section" aria-label="Delivery, Return Policy and Safety Information">
+    <div class="container">
+      <div class="section-heading-wrapper">
+        <span class="section-tag">Safety &amp; Protection</span>
+        <h2 class="section-title">Delivery, Hygiene &amp; Return Transparency</h2>
+        <p class="section-subtitle">Clear standards regarding product safety, hygiene, and transit protection.</p>
+      </div>
+
+      <div class="policy-grid">
+        <div class="policy-box">
+          <span class="policy-icon">🛡️</span>
+          <h4>Hygienic Safety Standard</h4>
+          <p>Due to FSSAI food safety regulations, ingestible health supplements cannot be returned or refunded once the tamper-evident foil seal has been broken or opened.</p>
+        </div>
+        <div class="policy-box">
+          <span class="policy-icon">🔄</span>
+          <h4>48-Hr Damage Replacement</h4>
+          <p>If your order arrives damaged in transit or defective, email care@wellbeingnutrition.com within 48 hours with photographic proof for an immediate free replacement.</p>
+        </div>
+        <div class="policy-box">
+          <span class="policy-icon">⚕️</span>
+          <h4>Medical Advisory</h4>
+          <p>Contains marine fish. If you are pregnant, nursing, have an existing medical condition, or take prescription drugs, consult your physician before supplementation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULE 10: FREQUENTLY ASKED QUESTIONS -->
+  <section id="faq" class="faq-section" aria-label="Frequently Asked Questions">
+    <div class="container">
+      <div class="section-heading-wrapper">
+        <span class="section-tag">Common Inquiries</span>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Detailed answers to the most common questions regarding Korean Marine Collagen.</p>
+      </div>
+
+      <div class="faq-list">
+        
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span>When is the best time of day to consume collagen peptides?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Collagen peptides can be consumed at any time of day that fits your schedule. Many customers enjoy it first thing in the morning mixed into their coffee, tea, or lemon water. Others prefer taking it in the evening with a warm beverage before bed. Routine consistency is far more important than exact timing.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span>Can I mix this powder into hot coffee without damaging the peptides?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Yes. Hydrolyzed collagen peptides have broken-down molecular amino acid chains that remain stable in typical hot beverage temperatures (up to 85°C). It dissolves cleanly in morning black coffee or tea without curdling or altering taste.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span>Why does a single 200g tub contain 25 servings rather than 30?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Each tub contains exactly 200 grams of pure hydrolysate. At the recommended clinical dose of one 8 g scoop daily, 200 g divided by 8 g yields exactly 25 servings. For a complete 7 to 8-week routine, we recommend our Pack of 2 (50 servings / 400 g) which offers better price-per-serving economics.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span>Is this product suitable for vegetarians?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            No. Genuine marine collagen is derived exclusively from the skin and scales of marine fish and is classified as Non-Vegetarian. Products marketed as 'vegan collagen' are plant-based amino acid boosters, not actual collagen protein.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button type="button" class="faq-question" aria-expanded="false">
+            <span>What should I do if I have a seafood allergy?</span>
+            <span class="faq-toggle-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            Do not consume this product if you have a known allergy to fish or marine seafood. Always review the allergen statement on the packaging before opening the product.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Wellbeing Nutrition</h4>
+          <p>Pure Korean Marine Collagen Peptides CRO Optimisation Case Study Prototype.</p>
+          <p style="margin-top: 0.5rem; font-size: 0.75rem;">
+            Marketer: Nutritionalab Pvt. Ltd., 2004 Phoenix Tower A, Lower Parel West, Mumbai 400013.<br>
+            FSSAI Lic. No. 10019022009134.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Product Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Overview &amp; Buy Box</a></li>
+            <li><a href="#preparation">How to Prepare</a></li>
+            <li><a href="#evidence">Clinical Studies</a></li>
+            <li><a href="#reviews">Customer Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>CRO Interventions</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Transparent Unit Cost</a></li>
+            <li><a href="#guide">Product Guide AI</a></li>
+            <li><a href="#reviews">Review Explorer</a></li>
+            <li><a href="#starter-concept">14-Day Starter Pack</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Policies &amp; Support</h4>
+          <ul class="footer-links">
+            <li><a href="#preparation">Sensory Guidance</a></li>
+            <li><a href="#evidence">Clinical Disclaimers</a></li>
+            <li><a href="mailto:care@wellbeingnutrition.com">Customer Support</a></li>
+            <li><a href="#hero">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Wellbeing Nutrition CRO Optimisation Case Study. Academic Demonstration Prototype.</div>
+        <div>Captured Reference Data: Judge.me 4.74★ (571 reviews) · Not a production store.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE FIXED STICKY BOTTOM PURCHASE TRAY -->
+  <div class="mobile-sticky-tray" id="mobile-sticky-tray" aria-label="Quick Purchase Controls">
+    <div class="sticky-pack-info">
+      <span class="sticky-pack-name" id="sticky-pack-title">Pack 1: ₹1,745</span>
+      <span class="sticky-pack-unit unit-pricing-element" id="sticky-pack-unit">₹69.80 / serving · 25 Days</span>
+    </div>
+    <button type="button" class="btn-sticky-add" id="btn-sticky-add-to-cart">
+      Add to Cart
+    </button>
+  </div>
+
+  <!-- FLOATING PRODUCT GUIDE LAUNCHER -->
+  <button type="button" class="floating-guide-trigger" id="btn-floating-guide-open" aria-label="Open Product Guide AI Assistant">
+    <span>💬</span>
+    <span>Ask Product Guide</span>
+  </button>
+
+  <!-- MODAL: MOBILE PRODUCT GUIDE AI ASSISTANT -->
+  <div class="modal-overlay" id="guide-modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-guide-title">
+    <div class="modal-sheet">
+      <div class="modal-header">
+        <div class="guide-title-lockup">
+          <div class="guide-avatar">🤖</div>
+          <div>
+            <h4 id="modal-guide-title">Product Guide Assistant</h4>
+            <p>Verified packaging &amp; regulatory facts</p>
+          </div>
+        </div>
+        <button type="button" class="modal-close-btn" id="btn-modal-guide-close" aria-label="Close assistant">✕</button>
+      </div>
+
+      <div class="guide-chat-body" id="modal-chat-body" aria-live="polite">
+        <div class="message-bubble assistant">
+          Hello! What would you like to know about our Korean Marine Collagen Peptides? Ask about coffee mixing, ingredients, allergy cautions, or pricing.
+        </div>
+      </div>
+
+      <div class="guide-chips-scroll" id="modal-guide-chips">
+        <button type="button" class="guide-chip" data-query="Can I mix it in hot black coffee or tea?">Coffee mixability?</button>
+        <button type="button" class="guide-chip" data-query="Does it taste or smell fishy?">Does it taste fishy?</button>
+        <button type="button" class="guide-chip" data-query="Is this suitable for vegetarians or people with seafood allergies?">Fish/Seafood Allergy?</button>
+        <button type="button" class="guide-chip" data-query="What is the return and refund policy?">Return Policy?</button>
+      </div>
+
+      <form class="guide-input-bar" id="modal-guide-form">
+        <input type="text" class="guide-input-field" id="modal-guide-input" placeholder="Type a product question..." aria-label="Type your question">
+        <button type="submit" class="guide-send-btn">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SIMULATED CART DRAWER -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+    <div class="cart-drawer">
+      <div class="cart-drawer-header">
+        <h3 id="cart-drawer-title" style="font-size: 1.125rem; font-weight: 800; color: var(--navy-dark);">Your Shopping Bag</h3>
+        <button type="button" class="modal-close-btn" id="btn-cart-close" aria-label="Close cart">✕</button>
+      </div>
+
+      <div class="cart-drawer-body" id="cart-drawer-body">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-summary-line">
+          <span>Estimated Total:</span>
+          <span class="cart-total-price" id="cart-summary-total">₹1,745</span>
+        </div>
+        <button type="button" class="btn-checkout-sim" id="btn-sim-checkout">
+          Proceed to GoKwik Checkout (Demo)
+        </button>
+        <p class="checkout-simulation-note">
+          Prototype Demo Mode: This triggers a simulated checkout confirmation for measurement plan evaluation. No live payment is processed.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOCAL MEASUREMENT DEMO EVENT LOGGER DRAWER (EVALUATOR TOOL) -->
+  <button type="button" class="event-log-toggle" id="btn-toggle-event-log" aria-label="Toggle Demonstration Telemetry Event Log">
+    <span>⚡</span>
+    <span>Telemetry Log (<span id="event-log-count">0</span>)</span>
+  </button>
+
+  <aside class="event-log-drawer" id="event-log-drawer" aria-label="Real-time prototype demonstration event stream">
+    <div class="event-log-header">
+      <span style="font-weight: 700; color: #38BDF8;">Local Telemetry Stream (Demo)</span>
+      <button type="button" style="color: #94A3B8; font-size: 0.875rem;" id="btn-close-event-log">✕</button>
+    </div>
+    <div class="event-log-body" id="event-log-body">
+      <!-- Events prepended via JS -->
+    </div>
+  </aside>
+
+  <!-- Prototype Scripts -->
+  <script src="data/product-data.js"></script>
+  <script src="data/reviews.demo.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
