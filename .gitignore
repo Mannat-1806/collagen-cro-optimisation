@@ -1,4 +1,6 @@
-# OS generated files
+# Reference inputs (assignment PDF & screenshots - keep local per instructions)
+reference_inputs/
+phase1_reference_inputs/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
