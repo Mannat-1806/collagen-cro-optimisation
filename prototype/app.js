@@ -17,6 +17,19 @@
   'use strict';
 
   // -------------------------------------------------------------
+  // HTML ESCAPING UTILITY (SECURITY & XSS PREVENTION)
+  // -------------------------------------------------------------
+  function escapeHtml(str) {
+    if (str === null || str === undefined) return '';
+    return String(str)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
+  // -------------------------------------------------------------
   // STATE MANAGEMENT
   // -------------------------------------------------------------
   const state = {
@@ -59,9 +72,9 @@
       logBody.innerHTML = state.eventLog.slice(0, 30).map(function (item) {
         return (
           '<div class="log-entry">' +
-            '<span class="log-time">' + item.timestamp + '</span>' +
-            '<span class="log-name">' + item.name + '</span>' +
-            '<span class="log-payload">' + JSON.stringify(item.payload) + '</span>' +
+            '<span class="log-time">' + escapeHtml(item.timestamp) + '</span>' +
+            '<span class="log-name">' + escapeHtml(item.name) + '</span>' +
+            '<span class="log-payload">' + escapeHtml(JSON.stringify(item.payload)) + '</span>' +
           '</div>'
         );
       }).join('');
@@ -415,28 +428,27 @@
 
     container.innerHTML = pageItems.map(function (rev) {
       const stars = '★'.repeat(rev.rating) + '☆'.repeat(5 - rev.rating);
-      const verifiedTag = rev.verified 
-        ? '<span class="verified-tag">✓ Verified Purchaser</span>'
-        : '<span style="color: #94A3B8;">Reviewer</span>';
+      const demoLabel = '<span class="review-demo-card-tag">Illustrative demo review — not real customer feedback</span>';
 
       const brandReply = rev.brandResponse
-        ? '<div class="brand-response-box"><strong>Wellbeing Nutrition Team Response:</strong>' + rev.brandResponse + '</div>'
+        ? '<div class="brand-response-box"><strong>' + (rev.brandResponse.startsWith('Simulated') ? '' : 'Simulated Brand Response (Educational Concept): ') + '</strong>' + escapeHtml(rev.brandResponse) + '</div>'
         : '';
 
       return (
         '<article class="review-card">' +
           '<div class="review-card-header">' +
             '<div class="reviewer-info">' +
-              '<span class="reviewer-name">' + rev.author + '</span>' +
-              '<span class="reviewer-meta">' + rev.location + ' · ' + verifiedTag + ' · ' + rev.date + '</span>' +
+              '<span class="reviewer-name">' + escapeHtml(rev.author) + '</span>' +
+              '<span class="reviewer-meta">' + escapeHtml(rev.location) + ' · ' + escapeHtml(rev.date) + '</span>' +
             '</div>' +
             '<span class="review-stars" aria-label="' + rev.rating + ' out of 5 stars">' + stars + '</span>' +
           '</div>' +
-          '<h4 class="review-title">' + rev.title + '</h4>' +
-          '<p class="review-body">' + rev.body + '</p>' +
+          '<div class="review-demo-badge-wrap">' + demoLabel + '</div>' +
+          '<h4 class="review-title">' + escapeHtml(rev.title) + '</h4>' +
+          '<p class="review-body">' + escapeHtml(rev.body) + '</p>' +
           '<div class="review-badges-row">' +
-            '<span class="review-tag">Duration: ' + rev.usageDuration + '</span>' +
-            '<span class="review-tag">Mix: ' + rev.mixRoutine + '</span>' +
+            '<span class="review-tag">Duration: ' + escapeHtml(rev.usageDuration) + '</span>' +
+            '<span class="review-tag">Mix: ' + escapeHtml(rev.mixRoutine) + '</span>' +
           '</div>' +
           brandReply +
           '<div class="review-footer">' +
@@ -602,8 +614,8 @@
     const chatBody = document.getElementById(targetBodyId);
     if (!chatBody) return;
 
-    // Append user bubble
-    appendChatBubble(chatBody, 'user', userQuery);
+    // Append user bubble strictly as plain text (XSS-safe)
+    appendChatBubble(chatBody, 'user', userQuery, false);
 
     // Search local deterministic knowledge base
     const match = findKnowledgeMatch(userQuery);
@@ -612,7 +624,7 @@
       if (match) {
         const answerHtml = match.answer + 
           '<div class="message-source-citation"><strong>Source:</strong> ' + match.source + ' (' + match.confidence + ')</div>';
-        appendChatBubble(chatBody, 'assistant', answerHtml);
+        appendChatBubble(chatBody, 'assistant', answerHtml, true);
 
         eventLogger.track('guide_intent_matched', {
           user_query: userQuery,
@@ -626,7 +638,7 @@
           "What I can confirm is that this product contains pure hydrolyzed Type I & III Korean marine collagen with no added sugar or artificial fillers. " +
           '<div class="message-source-citation">For specialized medical or batch inquiries, contact: <a href="mailto:care@wellbeingnutrition.com" style="color: #0D9488; font-weight: 600;">care@wellbeingnutrition.com</a></div>';
         
-        appendChatBubble(chatBody, 'assistant', fallbackHtml);
+        appendChatBubble(chatBody, 'assistant', fallbackHtml, true);
 
         eventLogger.track('guide_fallback_triggered', {
           unmatched_query: userQuery,
@@ -638,10 +650,14 @@
     }, 250);
   }
 
-  function appendChatBubble(container, sender, htmlContent) {
+  function appendChatBubble(container, sender, content, isHtml) {
     const bubble = document.createElement('div');
     bubble.className = 'message-bubble ' + sender;
-    bubble.innerHTML = htmlContent;
+    if (sender === 'user' || !isHtml) {
+      bubble.textContent = content;
+    } else {
+      bubble.innerHTML = content;
+    }
     container.appendChild(bubble);
     container.scrollTop = container.scrollHeight;
   }

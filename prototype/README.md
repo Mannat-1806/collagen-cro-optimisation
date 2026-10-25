@@ -54,19 +54,20 @@ The prototype integrates deterministic URL query-parameter toggles allowing revi
    * Resolves questions on coffee mixability, fish allergies, age suitability, and return policy without external LLM API dependencies.
    * Features strict uncertainty handling and transparent customer support escalation (`care@wellbeingnutrition.com`).
 3. **Detailed Customer Review Explorer (Intervention 3):**
-   * Grounded in the captured reference rating of **4.74 ★ based on 571 reviews** (deprecated the conflicting 4.9 testimonial banner).
+   * Grounded in the captured reference rating of **4.74 ★ based on 571 reviews** from Judge.me (live review feed not connected).
    * Real-time keyword search (e.g. search for *"coffee"*, *"smell"*, *"nails"*).
    * Filter by mix routine (*In Morning Coffee*, *In Water*, *In Smoothies*).
    * Sort by helpfulness, recency, highest rating, or critical reviews (1–2★).
-   * Review cards display verified purchaser badges, dates, usage durations, helpfulness upvotes, and brand responses.
+   * Review cards are synthetic demonstration examples carrying explicit visible disclosure labels (`Illustrative demo review — not real customer feedback`), neutral reviewer identifiers (e.g. `Illustrative Reviewer 01`), usage durations, and simulated brand responses. Synthetic entries omit verified purchaser badges, fictional identities, and fabricated rating distributions.
 4. **Proposed 14-Serving Starter Pack Concept (Intervention 4):**
    * Dedicated concept module proposing a 14-day trial (112g @ ₹999) with a simulated ₹200 repeat voucher.
    * Explicitly labelled as a concept for evaluation pending business and supply-chain sign-off; does not guarantee clinical transformation.
 5. **Ethical Hype & Transparent Value:**
-   * Clear value hierarchy, honest sensory expectations, verified offer codes (`BUY3@10`), and real-time pack comparison table.
+   * Clear value hierarchy, honest sensory expectations, transparent pack discounts (5% to 10% on multi-packs), and real-time pack comparison table.
    * Zero fake countdown timers, zero fake low-stock counters, zero fabricated purchase notifications.
-6. **Local Telemetry Event Logger (Measurement Plan Demo):**
+6. **Local Telemetry Event Logger (Measurement Plan Demo) & Security Hardening:**
    * Click **"⚡ Telemetry Log"** at the bottom-left to inspect the real-time event stream (`product_viewed`, `variant_selected`, `review_filter_applied`, `guide_intent_matched`, `add_to_cart`, `checkout_started`).
+   * **Security Hardening (Phase 3.1):** User queries in the Product Guide AI are rendered strictly via `textContent` and payload inputs inside the telemetry logger are sanitized via `escapeHtml`, neutralizing Cross-Site Scripting (XSS) risks.
 
 ---
 
@@ -76,8 +77,8 @@ The prototype integrates deterministic URL query-parameter toggles allowing revi
 | :--- | :--- | :--- |
 | **Product Specifications** | **Verified Fact** | 200g tub, 8g scoop, 25 servings, 90% Type I / 10% Type III from Korean marine fish, FSSAI Lic. 10019022009134. |
 | **Pricing & MRP** | **Captured Reference** | Pack 1: ₹1,745 (₹69.80/serv), Pack 2: ₹3,418 (₹68.36/serv), Pack 3: ₹5,019 (₹66.92/serv), Pack 4: ₹6,476 (₹64.76/serv). |
-| **Aggregate Rating** | **Captured Reference** | 4.74 ★ across 571 reviews from Judge.me widget on live storefront (October 2026). |
-| **Review Cards (25 items)** | **Illustrative Demo Data** | Synthesized sample dataset created to demonstrate multi-factor search and negative review discovery. |
+| **Aggregate Rating** | **Captured Reference** | 4.74 ★ across 571 reviews from Judge.me widget on live storefront (October 2026; live feed not connected). |
+| **Review Cards (25 items)** | **Illustrative Demo Data** | Synthesized sample dataset created to demonstrate UX interactions. Each card carries a visible demo label; verified purchaser tags, fictional identities, and unverified aggregate metrics are omitted. |
 | **Product Guide Assistant** | **Deterministic Scripted** | Operates over local structured knowledge base. Does not use live LLM APIs. |
 | **Cart & GoKwik Checkout** | **Simulated Demo** | Simulates drawer open, cart total calculation, and order confirmation. No financial transaction processed. |
 | **14-Day Starter Pack** | **Evaluated Concept** | Proposed SKU requiring supply chain, packaging, and commercial sign-off before production. |

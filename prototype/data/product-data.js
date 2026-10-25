@@ -13,7 +13,7 @@ window.PRODUCT_DATA = {
     title: "Pure Korean Marine Collagen Peptides",
     subtitle: "Hydrolyzed Type I & III Marine Peptides (8 g per serving) for Skin Hydration, Hair Strength & Joint Support",
     flavor: "Unflavored Powder",
-    badge: "100% Korean Deep-Sea Sourced",
+    badge: "Imported Korean Marine Peptides (Packaged in India)",
     weightGrams: 200,
     servingSizeGrams: 8,
     servingsPerTub: 25,
@@ -23,9 +23,11 @@ window.PRODUCT_DATA = {
     currencySymbol: "₹",
     rating: 4.74,
     reviewCount: 571,
+    ratingSourceDisclosure: "Captured reference rating from Judge.me platform (October 2026; live review feed not connected)",
     fssaiLicense: "10019022009134",
     shelfLifeMonths: 24,
-    origin: "India (Marine Collagen Peptides imported from South Korea)",
+    shelfLifeNote: "Stated shelf life 24 months from manufacture date; refer to tub base for exact batch expiry",
+    origin: "Formulated and packaged in India using pure marine collagen peptides imported from South Korea",
     dietaryClassification: "Non-Vegetarian (Marine Fish)",
     manufacturer: "Nutritionalab Pvt. Ltd., Lower Parel West, Mumbai 400013"
   },
@@ -147,13 +149,13 @@ window.PRODUCT_DATA = {
 
   specifications: [
     { label: "Product Type", value: "Hydrolyzed Collagen Peptide Powder" },
-    { label: "Sourcing", value: "Wild-caught Korean deep-sea fish (skin & scales)" },
+    { label: "Sourcing & Origin", value: "Marine collagen peptides imported from South Korea; finished product packaged in India." },
     { label: "Collagen Profile", value: "90% Type I, 10% Type III Marine Peptides" },
     { label: "Serving Size", value: "8 g (1 level scoop included inside tub)" },
     { label: "Net Weight", value: "200 g per tub (25 servings per tub)" },
     { label: "Dietary Suitability", value: "Non-Vegetarian (Contains Fish) · Gluten-Free · Dairy-Free · Keto-Friendly" },
     { label: "Added Ingredients", value: "Zero added sugar, zero artificial flavors, zero preservatives" },
-    { label: "Shelf Life", value: "24 months from manufacturing date (check base of tub for batch details)" },
+    { label: "Shelf Life", value: "Stated shelf life of 24 months from date of manufacture. Check physical tub base for batch number and exact expiry date." },
     { label: "FSSAI License", value: "Lic. No. 10019022009134 (Nutritionalab Pvt. Ltd.)" }
   ],
 
@@ -200,41 +202,41 @@ window.PRODUCT_DATA = {
   knowledgeBase: [
     {
       id: "intent_ingredients",
-      keywords: ["ingredient", "what is in it", "contain", "source", "fish", "purity", "additive", "sugar"],
+      keywords: ["ingredient", "what is in it", "contain", "source", "fish", "purity", "additive", "sugar", "origin"],
       question: "What exactly is in this product and where is it sourced?",
-      answer: "Wellbeing Nutrition Pure Korean Marine Collagen contains 100% pure hydrolyzed marine collagen peptides (90% Type I, 10% Type III) sourced from wild-caught deep-sea fish in South Korea. It contains zero added sugar, artificial sweeteners, preservatives, dairy, or gluten. Each 8 g scoop delivers pure collagen protein with no fillers.",
+      answer: "Wellbeing Nutrition Pure Korean Marine Collagen contains pure hydrolyzed marine collagen peptides (90% Type I, 10% Type III) imported from South Korea and packaged in India. It contains zero added sugar, artificial sweeteners, preservatives, dairy, or gluten. Each 8 g scoop delivers pure collagen protein with no fillers.",
       source: "Product Back-of-Pack Nutritional Panel & FSSAI Filing",
-      confidence: "Verified"
+      confidence: "Verified Sourcing Disclosure"
     },
     {
       id: "intent_taste_fishy",
       keywords: ["fishy", "taste", "smell", "odor", "flavour", "flavor", "aftertaste"],
       question: "Does it taste or smell fishy?",
-      answer: "The powder is processed through advanced enzymatic hydrolysis to produce an unflavored, neutral powder. When mixed into warm coffee, tea, fruit juice, or smoothies, the taste is virtually undetectable. In plain lukewarm water, some sensitive palates report a faint, natural marine mineral note. Individual sensory perceptions vary.",
-      source: "Preparation Guide & Customer Sensory Feedback",
-      confidence: "Verified"
+      answer: "The powder is an unflavored hydrolysate processed via enzymatic hydrolysis. When mixed into warm coffee, tea, citrus juice, or smoothies, the taste is virtually undetectable. In plain room-temperature water, some sensitive palates report a faint, natural marine mineral note. Individual sensory perceptions vary depending on the beverage vehicle and personal sensitivity.",
+      source: "Preparation Guide & Sensory Transparency Standards",
+      confidence: "Verified Sensory Guidance"
     },
     {
       id: "intent_coffee_mix",
       keywords: ["coffee", "hot", "tea", "heat", "temperature", "boiling", "dissolve", "mix"],
       question: "Can I mix it in hot black coffee or tea?",
-      answer: "Yes. Hydrolyzed collagen peptides are heat-stable in hot beverages such as morning coffee, tea, and warm water. For best dissolvability, add 1 scoop into your mug, pour your warm liquid over it, and stir briskly for 20–30 seconds. In ice-cold drinks, an electric frother or shaker is recommended to avoid clumping.",
-      source: "Usage & Solubility Guidelines",
-      confidence: "Verified"
+      answer: "Yes. Hydrolyzed collagen peptides dissolve smoothly in warm morning coffee, tea, and room-temperature beverages. For best dissolvability, add 1 scoop into your mug, pour your warm liquid over it, and stir briskly for 20–30 seconds. In ice-cold drinks, an electric frother or shaker is recommended to avoid clumping. Avoid prolonged rolling boiling which could alter protein integrity.",
+      source: "Preparation & Solubility Guidelines",
+      confidence: "Verified Routine Guidance"
     },
     {
       id: "intent_age_suitability",
       keywords: ["age", "who can use", "young", "teen", "20", "old", "men", "women"],
       question: "Who can use this supplement, and what is the recommended age?",
-      answer: "This dietary supplement is formulated for adult women and men (18 years and above). Natural collagen production in the body begins decreasing around age 25. Note: While adult dietary use is standard under FSSAI rules, specific product-level age minimums should be confirmed with your physician if under 18.",
-      source: "Dietary Supplement Adult Guidelines (FSSAI)",
-      confidence: "Verified Adult Formulation"
+      answer: "This dietary supplement is formulated for adult use under standard Indian regulatory guidelines. Natural collagen synthesis begins declining in early adulthood. Note: Specific product-level age suitability should be verified directly with the manufacturer or your personal physician before consumption by minors.",
+      source: "Dietary Supplement Adult Standards (Consult Physician for Minors)",
+      confidence: "Regulatory Adult Classification"
     },
     {
       id: "intent_allergy_fish",
       keywords: ["allergy", "allergic", "seafood", "shellfish", "marine", "veg", "vegetarian"],
       question: "Is this suitable for vegetarians or people with seafood allergies?",
-      answer: "IMPORTANT SAFETY NOTICE: This product is 100% marine-derived from fish. It is strictly non-vegetarian and NOT suitable for anyone with a known fish or marine seafood allergy. If you experience adverse reactions, discontinue use immediately and seek medical attention.",
+      answer: "IMPORTANT SAFETY NOTICE: This product is 100% marine-derived from fish skin and scales. It is strictly non-vegetarian and NOT suitable for anyone with a known fish or marine seafood allergy. If you experience adverse reactions, discontinue use immediately and seek medical attention.",
       source: "Mandatory Allergen Disclosures & Packaging Symbol",
       confidence: "High Safety Priority"
     },
@@ -242,7 +244,7 @@ window.PRODUCT_DATA = {
       id: "intent_pregnancy_breastfeeding",
       keywords: ["pregnant", "pregnancy", "breastfeeding", "lactation", "nursing", "baby"],
       question: "Can I take this while pregnant or breastfeeding?",
-      answer: "While marine collagen peptides are dietary proteins, nutritional requirements and immune sensitivities change significantly during pregnancy and nursing. Wellbeing Nutrition strongly advises consulting your OB-GYN or healthcare provider before introducing any new supplement into your prenatal or postnatal routine.",
+      answer: "While marine collagen peptides are dietary proteins, nutritional requirements and physiological sensitivities change significantly during pregnancy and nursing. Wellbeing Nutrition strongly advises consulting your OB-GYN or healthcare provider before introducing any new supplement into your prenatal or postnatal routine.",
       source: "Medical Caution & Advisory Standards",
       confidence: "Medical Referral Required"
     },
@@ -250,9 +252,9 @@ window.PRODUCT_DATA = {
       id: "intent_side_effects",
       keywords: ["side effect", "breakout", "acne", "bloat", "stomach", "digestion", "gas"],
       question: "Are there any side effects or digestive issues?",
-      answer: "Hydrolyzed collagen peptides are generally well-tolerated. However, as with any concentrated protein supplement, some individuals may experience mild digestive fullness when starting. If you have a sensitive stomach, consider starting with half a scoop (4 g) for the first 3 days with a meal before moving to a full 8 g scoop.",
-      source: "Clinical Tolerance Literature",
-      confidence: "Verified Guidance"
+      answer: "Hydrolyzed collagen peptides are generally well-tolerated. However, as with any concentrated protein supplement, some individuals may experience mild digestive fullness when starting. We recommend taking your daily 8 g serving alongside a meal and maintaining adequate daily water intake. If digestive discomfort persists, discontinue use and consult a physician.",
+      source: "Dietary Protein Tolerance Literature",
+      confidence: "Standard Usage Advisory"
     },
     {
       id: "intent_evidence_timeline",
@@ -266,9 +268,9 @@ window.PRODUCT_DATA = {
       id: "intent_expiry_batch",
       keywords: ["expiry", "expiration", "shelf life", "fresh", "batch", "date"],
       question: "What is the shelf life and exact expiry date?",
-      answer: "Wellbeing Nutrition Korean Marine Collagen has a total shelf life of 24 months from the date of manufacture. Exact expiration dates are printed individually on the base of each physical tub alongside the batch number. Store in a cool, dry place away from direct sunlight with the lid tightly closed.",
-      source: "Packaging Specifications",
-      confidence: "Verified Shelf Life (Batch-Specific Date on Tub Base)"
+      answer: "Wellbeing Nutrition Korean Marine Collagen carries a stated shelf life of 24 months from the date of manufacture. Exact expiration dates and lot numbers are printed individually on the base of each physical tub. Store in a cool, dry place away from direct sunlight with the lid tightly closed.",
+      source: "Packaging Specifications (Tub Base)",
+      confidence: "Verified Shelf Life (Batch-Specific Expiry on Tub Base)"
     },
     {
       id: "intent_comparison",
@@ -282,9 +284,9 @@ window.PRODUCT_DATA = {
       id: "intent_pricing_cost_per_serving",
       keywords: ["price", "cost", "per serving", "discount", "offer", "pack", "how much"],
       question: "How much does each pack cost per serving?",
-      answer: "Based on our captured reference pricing: Pack of 1 (25 servings) is ₹1,745 (₹69.80 / serving). Pack of 2 (50 servings) is ₹3,418 (₹68.36 / serving). Pack of 3 (75 servings) is ₹5,019 (₹66.92 / serving). Pack of 4 (100 servings) is ₹6,476 (₹64.76 / serving). You can also apply promo code BUY3@10 on qualifying bundle orders.",
+      answer: "Based on captured reference pricing: Pack of 1 (25 servings) is ₹1,745 (₹69.80 / serving). Pack of 2 (50 servings) is ₹3,418 (₹68.36 / serving). Pack of 3 (75 servings) is ₹5,019 (₹66.92 / serving). Pack of 4 (100 servings) is ₹6,476 (₹64.76 / serving). Multi-pack discounts of 5% to 10% are built directly into larger bundles for routine continuity.",
       source: "Captured Reference Pricing Table",
-      confidence: "Verified Pricing"
+      confidence: "Captured Reference Pricing"
     },
     {
       id: "intent_return_policy",
@@ -292,7 +294,7 @@ window.PRODUCT_DATA = {
       question: "What is the return and refund policy?",
       answer: "Due to health, hygiene, and FSSAI food safety regulations, dietary supplements cannot be returned or refunded once the tamper-evident protective seal is opened. However, if your order arrives physically damaged in transit or defective, email care@wellbeingnutrition.com within 48 hours of delivery with photos for a free replacement.",
       source: "Official Wellbeing Nutrition Refund & Shipping Policy",
-      confidence: "Verified Policy"
+      confidence: "Verified Safety Standard"
     }
   ]
 };

@@ -67,12 +67,21 @@ flowchart TD
 | **Guardrail Metric 1** | **Average Order Value (AOV)** | Total gross sales divided by total completed transactions. Must not drop by >2%. | `order_completed` |
 | **Guardrail Metric 2** | **Multi-pack Selection Share** | Percentage of orders choosing Pack of 2 or higher. Must remain $\ge$ Control baseline. | `variant_selected` |
 
-### 2.4 Illustrative Sample Size & Duration Calculation
-* *Assumed Illustrative Baseline ATC Rate:* 6.0%
-* *Minimum Detectable Effect (MDE):* 10% relative lift (from 6.0% to 6.6%, absolute $\Delta = 0.6\%$).
-* *Statistical Inputs:* $\alpha = 0.05$ (two-tailed), Power ($1 - \beta$) = 0.80.
-* *Required Sample Size (Illustrative):* Approximately **20,800 unique visitors per variant** (total sample: ~41,600 visitors).
-* *Duration Estimation:* If the PDP receives an illustrative 3,000 daily unique visitors, the test will achieve full statistical power in approximately **14 days**. *(Actual duration to be locked once real GA4 traffic data is provided).*
+### 2.4 Illustrative Sample Size & Duration Calculation (Phase 3.1 Recalculated)
+* *Assumed Illustrative Baseline ATC Rate ($p_1$):* 6.0% ($0.060$).
+* *Minimum Detectable Effect (MDE):* 10% relative lift ($p_2 = 0.066$, absolute effect size $\Delta = |p_2 - p_1| = 0.006$).
+* *Statistical Inputs:* Significance level $\alpha = 0.05$ (two-tailed, $Z_{\alpha/2} = 1.95996$), Statistical Power $1 - \beta = 0.80$ ($Z_\beta = 0.84162$).
+* *Exact Two-Proportion Formula (Fleiss / Chow et al.):*
+  $$\bar{p} = \frac{p_1 + p_2}{2} = 0.063, \quad \bar{q} = 0.937$$
+  $$n = \frac{\left(Z_{\alpha/2}\sqrt{2\bar{p}(1-\bar{p})} + Z_\beta\sqrt{p_1(1-p_1) + p_2(1-p_2)}\right)^2}{(p_2 - p_1)^2}$$
+  $$\text{Numerator: } \left(1.95996\sqrt{0.118062} + 0.84162\sqrt{0.118044}\right)^2 = (0.67345 + 0.28916)^2 = (0.96261)^2 \approx 0.92662$$
+  $$\text{Denominator: } (0.006)^2 = 0.000036$$
+  $$n = \frac{0.92662}{0.000036} \approx \mathbf{25,740 \text{ unique visitors per variant}}$$
+* *Total Required Sample Size:* **51,480 unique PDP visitors** across both variants.
+* *Correction Note:* The preliminary draft noted ~20,800 per variant, which reflected an unadjusted or one-tailed approximation. The rigorous two-tailed calculation requires **25,740 visitors per variant**.
+* *Duration Estimation:* Assuming the PDP receives an illustrative 3,000 daily unique visitors (1,500 allocated per variant in a 50/50 randomized split):
+  $$\text{Duration} = \frac{25,740}{1,500} = 17.16 \text{ days} \to \mathbf{18 \text{ full days}}$$
+  *(Includes two full 7-day cyclical business weeks to control for day-of-week seasonality).*
 
 ### 2.5 Decision Criteria (Ship / Iterate / Rollback)
 * **Ship Variant:** Variant B achieves statistically significant lift in ATC rate ($p < 0.05$) with no degradation in AOV.
@@ -111,12 +120,20 @@ flowchart TD
 | **Guardrail Metric 1** | **PDP Exit Rate from Review Section** | Percentage of visitors whose final interaction is within the review module before bouncing. | `review_section_exit` |
 | **Guardrail Metric 2** | **Customer Support Negative Tickets** | Volume of inquiries to `care@wellbeingnutrition.com` alleging review manipulation. | CRM weekly ticket log |
 
-### 3.4 Illustrative Sample Size & Duration Calculation
-* *Assumed Illustrative Baseline Purchase Conversion:* 2.0%
-* *Minimum Detectable Effect (MDE):* 15% relative lift (from 2.0% to 2.3%, absolute $\Delta = 0.3\%$).
-* *Statistical Inputs:* $\alpha = 0.05$ (two-tailed), Power ($1 - \beta$) = 0.80.
-* *Required Sample Size (Illustrative):* Approximately **31,200 visitors reaching the review section per variant** (total: ~62,400).
-* *Duration Estimation:* Assuming 50% of PDP visitors scroll to the review module (1,500 qualified visitors/day), the test requires approximately **28–35 days** to achieve full statistical significance.
+### 3.4 Illustrative Sample Size & Duration Calculation (Phase 3.1 Recalculated)
+* *Assumed Illustrative Baseline Purchase Conversion ($p_1$):* 2.0% ($0.020$).
+* *Minimum Detectable Effect (MDE):* 15% relative lift ($p_2 = 0.023$, absolute effect size $\Delta = |p_2 - p_1| = 0.003$).
+* *Statistical Inputs:* Significance level $\alpha = 0.05$ (two-tailed, $Z_{\alpha/2} = 1.95996$), Statistical Power $1 - \beta = 0.80$ ($Z_\beta = 0.84162$).
+* *Exact Two-Proportion Formula (Fleiss / Chow et al.):*
+  $$\bar{p} = \frac{p_1 + p_2}{2} = 0.0215, \quad \bar{q} = 0.9785$$
+  $$n = \frac{\left(Z_{\alpha/2}\sqrt{2\bar{p}(1-\bar{p})} + Z_\beta\sqrt{p_1(1-p_1) + p_2(1-p_2)}\right)^2}{(p_2 - p_1)^2}$$
+  $$\text{Numerator: } \left(1.95996\sqrt{0.0420755} + 0.84162\sqrt{0.042071}\right)^2 = (0.40203 + 0.17263)^2 = (0.57466)^2 \approx 0.33023$$
+  $$\text{Denominator: } (0.003)^2 = 0.000009$$
+  $$n = \frac{0.33023}{0.000009} \approx \mathbf{36,694 \text{ qualified visitors per variant}}$$
+* *Total Required Sample Size:* **73,388 qualified visitors** reaching the review section.
+* *Correction Note:* The preliminary draft noted ~31,200 per variant. Rigorous calculation requires **36,694 qualified visitors per arm**.
+* *Duration Estimation:* Assuming 50% of 3,000 daily PDP visitors scroll to the review module (1,500 qualified visitors/day, or 750 allocated per variant in a 50/50 split):
+  $$\text{Duration} = \frac{36,694}{750} \approx 48.92 \text{ days} \to \mathbf{49 \text{ full days (7 full weekly business cycles)}}$$
 
 ### 3.5 Decision Criteria
 * **Ship Variant:** Completed-purchase conversion increases with statistical significance ($p < 0.05$), and review interaction depth increases without elevating review-section bounce rate.

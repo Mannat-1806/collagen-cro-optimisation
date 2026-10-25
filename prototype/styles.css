@@ -1182,6 +1182,23 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   color: var(--slate-muted);
 }
 
+.review-demo-badge-wrap {
+  margin-top: -0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.review-demo-card-tag {
+  display: inline-block;
+  background: #FEF3C7;
+  color: #92400E;
+  border: 1px solid #FCD34D;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.01em;
+}
+
 .verified-tag {
   color: var(--primary-teal);
   font-weight: 600;
