@@ -1,161 +1,186 @@
-# Product Management Case Study: Conversion Rate Optimisation (CRO)
-## Wellbeing Nutrition – Korean Marine Collagen Peptides Product Detail Page (PDP)
+# Wellbeing Nutrition – Korean Marine Collagen Peptides (PDP Redesign)
 
-> **Course / Academic Context:** Advanced Product Management & Growth Strategy  
-> **Target Product:** [Wellbeing Nutrition – Korean Marine Collagen Peptides](https://wellbeingnutrition.com/products/korean-marine-collagen-peptides)  
-> **Focus Area:** Conversion Rate Optimisation (CRO), Heuristic UX Audit, Experimentation Design & Responsive Prototyping  
-> **Status:** Phase 1 Complete (Audited Research Foundation, Strategy & Experimentation Architecture)
+A modern, conversion-focused e-commerce Product Detail Page (PDP) redesign for **Wellbeing Nutrition Korean Marine Collagen Peptides**, built with **React 18**, **Vite**, and **Tailwind CSS**.
 
 ---
 
-## 1. Executive Summary & Project Objective
+## 1. Project Overview
 
-This project delivers an end-to-end Product Management Conversion Rate Optimisation (CRO) strategy and validation prototype for **Wellbeing Nutrition's Korean Marine Collagen Peptides** product detail page (PDP).
+This project redesigns the online shopping experience for Wellbeing Nutrition's flagship Korean Marine Collagen Peptides supplement. The redesign transitions the product detail page from an academic, text-heavy layout into a polished, trustworthy, and customer-friendly e-commerce experience designed to reduce customer hesitation and boost purchase confidence.
 
-### Core Problem Statement
-Wellbeing Nutrition's Korean Marine Collagen Peptides is a premium supplement formulated with wild-caught deep-sea Korean fish (salmon, cod, haddock) and nano-hydrolyzed Type I & III peptides at `<1000 Daltons`. However, D2C ingestible beauty supplements face three prominent behavioral friction barriers at the PDP evaluation stage:
-1. **The Sensory Barrier ("Fishy Aftertaste" Hesitation):** Prospective customers frequently hesitate to purchase marine collagen out of concern for unpleasant odor, fishy taste, or clumping in beverages.
-2. **The High-Upfront Cost Barrier:** Displaying a single lump-sum purchase price (~₹1,700) without a transparent daily breakdown (~₹65–₹72/day for 25 servings) creates cognitive sticker shock.
-3. **Mobile Viewport Navigation Friction:** With the vast majority of traffic arriving on mobile devices, prolonged vertical scrolling through educational and clinical content causes users to lose immediate access to the purchase call-to-action (CTA).
-
-### Objective
-Systematically formulate, prioritize, and design evidence-backed CRO interventions to increase the **Mobile PDP Add-to-Cart (ATC) Rate** and downstream **E-Commerce Conversion Rate**, validated via a responsive prototype and an academic-grade A/B testing blueprint.
+### Key Objectives
+* **Conversion-First UX:** Immediate access to product variants, authentic bundle photos, transparent daily cost math, and purchase actions directly below the gallery in normal document flow (no sticky/fixed purchase bars).
+* **Benefit-Led Storytelling:** Replacing dense scientific monographs with scannable benefit cards, visual preparation routines, and transparent ingredient specifications.
+* **Customer-Centric Reviews:** Prioritizing readable customer comments with live keyword search, star rating filters, sorting, and an interactive review submission flow.
+* **Factual & Scientific Integrity:** Every pack option, price, serving count, and clinical reference is strictly grounded in verifiable product and clinical trial data.
 
 ---
 
-## 2. Research Integrity & Evidence Standards
+## 2. Key Features
 
-To maintain academic and professional rigor, this repository strictly adheres to a **Four-Tier Evidence Classification**:
+### 🛍️ Product Hero & Dynamic 4-Pack Selector
+* **Two-Column E-Commerce Layout:** Left gallery column paired with the right purchase decision box on desktop; smoothly stacks on mobile viewports.
+* **16-Slide High-Resolution Gallery:** Features authentic 1080×1080 packaging photos, clinical trial graphics, preparation steps, and back-of-pack nutrition panels with interactive thumbnails and previous/next navigation.
+* **4-Pack Visual Variant Selector:** Each pack option displays its authentic bundle photograph, selling price, MRP with strikethrough, savings percentage, cost per day, and serving count:
+  * **Pack of 1:** ₹1,745 (MRP ₹1,799, save 3% · ₹70/day · 25 servings)
+  * **Pack of 2:** ₹3,418 (MRP ₹3,598, save 5% · ₹68/day · 50 servings)
+  * **Pack of 3:** ₹5,019 (MRP ₹5,397, save 7% · ₹67/day · 75 servings)
+  * **Pack of 4:** ₹6,476 (MRP ₹7,196, save 10% · ₹65/day · 100 servings)
+* **Natural Document Flow:** Cart and purchase controls follow natural scrolling without invasive sticky viewport overlays.
 
-- `[OBSERVATION: Verified PDP]` — Directly observable on the live official product page (exact copy, pack size, price, serving count, visible certifications).
-- `[EXTERNAL EVIDENCE: Verified Source]` — Supported by cited external sources with permanent identifiers/URLs (PubMed PMIDs, DOIs, authoritative benchmark studies).
-- `[UNVERIFIED ASSUMPTION: Baseline Needed]` — Qualitative inferences regarding user drop-offs, internal metrics, or traffic channel breakdowns that require first-party Google Analytics 4 (GA4) or Shopify access.
-- `[HYPOTHESIS: To Be Experimentally Tested]` — Falsifiable Product Management propositions engineered for experimentation.
+### 🌿 Human-Centred Benefits Grid
+* 3 visually distinct benefit cards with authentic product gallery pairings:
+  1. **Skin Hydration & Bounce:** Supports dermal moisture, elasticity, and fine line reduction.
+  2. **Hair & Nail Strength:** Supplies proline and glycine peptides as structural building blocks.
+  3. **Daily Connective Care:** Wholesome joint comfort and active body mobility.
+* Qualified claims with an expandable *"What Research Suggests & Realistic Expectations"* disclosure.
 
-> [!WARNING]
-> **Integrity Guardrails:**
-> 1. No conversion rates, private revenue analytics, customer interviews, or clinical claims have been fabricated.
-> 2. Generic industry benchmarks (e.g. 70% cart abandonment) are macro category context and are **never treated as proof** of Wellbeing Nutrition's actual performance.
-> 3. Behavioral personas are treated strictly as **heuristic mental models**, not empirical customer segments.
-> 4. Prioritization confidence scores are **calibrated to reflect pre-analytics uncertainty** rather than arbitrarily inflated.
-> 5. A/B testing calculations incorporate **multiplicity correction (Bonferroni)** to account for multiple treatment arms against control.
+### ☕ Visual Daily Routine & Beverage Pairings
+* Authentic preparation graphic with step-by-step guidance.
+* 3 compact beverage tiles illustrating daily habit integration:
+  * **Hot Morning Brew:** Heat-stable in black coffee, green tea, or matcha.
+  * **Cold Hydration:** Fresh citrus water, coconut water, or cold infusions.
+  * **Smoothies & Breakfast Bowls:** Blends smoothly with zero clumping or chalkiness.
+
+### 🔬 Clean Nutritional Specifications & Trust Strip
+* 4 quick-reference metric pills: `8,000 mg Pure Marine Collagen`, `100% Type I & III`, `0g Added Sugar`, and `36 kcal`.
+* Authentic back-of-pack nutrition label (`slide-12`) with readable supplement facts and collapsible 18-amino-acid breakdown.
+* 5 official facility certifications: US FDA Registered Facility, FSSAI Licensed, GMP Certified, 3rd-Party Heavy Metal Tested, and Korean Deep-Sea Sourced.
+
+### 🧬 "The Science Behind Collagen" (Compact & Collapsible)
+* 3 concise takeaway cards displayed by default (Sub-3,000 Daltons Nano-Peptides, Intestinal Barrier Uptake, Fibroblast Stimulation).
+* Collapsible deep-dive drawers for the Daltons molecular weight comparison, 8–12 week clinical progression timeline, and peer-reviewed PubMed citations (*PMID: 29949889*, *PMID: 33742449*, *PMID: 35049916*).
+
+### ⭐ Customer Experiences & Reviews
+* **Compact Header (Occupies ~12% Viewport):** Displays `4.74 / 5.0` rating with 5 gold stars and `(571 Verified Reviews)` inline alongside `Verified Aggregate Score`.
+* **Collapsible Rating Breakdown:** Expandable 5-star to 1-star horizontal distribution bars with interactive click-to-filter capability.
+* **Immediately Visible Customer Comments:** 6+ detailed review cards displayed in a balanced 2-column grid on desktop and stacked on mobile, with a functional "Load More Reviews" button.
+* **Interactive Controls:** Real-time search by keyword, star rating filter pills (`All`, `5★`, `4★`, `3★`, `2★`, `1★`), sorting (`Most Recent`, `Highest Rated`, `Lowest Rated`, `Most Helpful`), helpful counters, and photo attachment lightbox.
+* **Review Submission Experience:** Accessible modal with client-side validation for rating, headline, body text, pack size, author name, email, and recommendation toggle.
+
+### 💬 Interactive Wellness Shopping Assistant
+* Fixed, accessible concierge button (`Ask our Wellness Assistant`) opening a conversational assistant.
+* 100% deterministic, rule-based responses grounded in verified product data (`productData.js`).
+* Answers customer inquiries on ingredients, dosage, pack math, mixability, and official 48-hour return policies with section jump links.
+* Strict medical safety guardrails for pregnancy, fish allergies, and minors.
 
 ---
 
-## 3. Repository Architecture
+## 3. Technology Stack
+
+* **Framework:** React 18.3 (`react`, `react-dom`)
+* **Build Tool:** Vite 6.0 (Fast HMR, optimized ESM bundling)
+* **Styling:** Tailwind CSS 3.4 & PostCSS with Autoprefixer
+* **Typography:** Cormorant Garamond (Editorial serif headings) & Inter (UI sans-serif)
+* **Icons:** Lucide React (`lucide-react`)
+* **Testing:** Node.js native test runner (`node:assert`, `node:fs`)
+
+---
+
+## 4. Prerequisites
+
+* **Node.js:** v18.0.0 or higher (LTS recommended)
+* **npm:** v9.0.0 or higher
+
+---
+
+## 5. Installation & Setup
+
+1. **Navigate to the application directory:**
+   ```bash
+   cd react-app
+   ```
+
+2. **Install project dependencies:**
+   ```bash
+   npm install
+   ```
+
+---
+
+## 6. Development & Build Commands
+
+All commands should be executed from within the `react-app/` directory:
+
+| Command | Action | Output / URL |
+| :--- | :--- | :--- |
+| `npm run dev` | Starts the local Vite development server with hot module replacement | `http://localhost:5173` |
+| `npm test` | Runs the full automated verification test suite across all 4 modules | Command line test output (100% pass) |
+| `npm run build` | Compiles and optimizes assets into production-ready bundle | Creates `dist/` directory (~3.2s build time) |
+| `npm run preview` | Serves the production build locally for verification | `http://localhost:4173` |
+
+---
+
+## 7. Project Structure
 
 ```text
-collagen-cro-optimization/
-├── .env.example                       # Safe environment variable template (no secrets)
-├── .gitignore                         # Comprehensive ignore rules (Node, Vite, secrets, build)
-├── README.md                          # Master project documentation, objectives & verification
-├── research/                          # Research foundation & evidence catalog
-│   ├── evidence-template.md           # Standardized 4-tier evidence and hypothesis template
-│   ├── product-teardown.md            # Component-by-component heuristic audit of the live PDP
-│   └── sources-and-benchmarks.md      # Scientific literature (PMIDs), brand assets & D2C benchmarks
-└── docs/                              # PM frameworks & experimentation strategy
-    ├── customer-journey.md            # Heuristic mental models, funnel stages & drop-off analysis
-    ├── cro-prioritisation.md          # Calibrated ICE scoring rubric & ranked hypothesis backlog
-    ├── ab-testing-plan.md             # Formal A/B/n test plan, Bonferroni correction, sample size math
-    ├── prototype-roadmap.md           # 5-phase responsive React+Vite prototype roadmap
-    └── prototype-spec.md              # Detailed component, layout & interaction prototype spec
+react-app/
+├── public/
+│   ├── images/                        # Base product packaging photos
+│   └── product-gallery/               # 16 authentic 1080x1080 product & infographic slides
+│       ├── slide-01-marine_collagen.jpg
+│       ├── slide-02-collagen_to_reduce_signs_of_ageing.jpg
+│       ├── slide-03-collagen_science.jpg
+│       ├── slide-04-collagen_absorption.png
+│       ├── ...
+│       └── slide-16-marine_collagen_unflavored_pack_of_4.jpg
+├── src/
+│   ├── components/                    # Modular UI components
+│   │   ├── BenefitsDeepDive.jsx       # 3-column e-commerce benefits grid
+│   │   ├── CartDrawer.jsx             # Slide-out shopping cart drawer
+│   │   ├── EditorialHero.jsx          # Hero section with 4-pack visual selector & gallery
+│   │   ├── ExpandableSection.jsx      # Accessible accordion component
+│   │   ├── Header.jsx                 # Brand navigation header
+│   │   ├── IngredientsNutrition.jsx   # Nutrition label, stats & amino acid breakdown
+│   │   ├── PrototypeModal.jsx         # Prototype purchase action notification
+│   │   ├── PrototypeNoticeBanner.jsx  # Academic prototype compliance banner
+│   │   ├── ReviewsSection.jsx         # Compact reviews overview & customer comments grid
+│   │   ├── ScienceAbsorption.jsx      # Compact science & clinical evidence overview
+│   │   ├── TrustStrip.jsx             # Sourcing pillars & facility certifications
+│   │   ├── UsageMixability.jsx        # Preparation routine & daily beverage pairings
+│   │   └── WellnessAssistant.jsx      # Conversational customer concierge dialog
+│   ├── context/
+│   │   └── CartContext.jsx            # Cart state management (items, totals, open/close)
+│   ├── data/
+│   │   ├── productData.js             # Verified product specs, prices, packs & policies
+│   │   └── reviewsData.js             # Verified benchmark metrics & sample prototype reviews
+│   ├── utils/
+│   │   └── assistantEngine.js         # Deterministic NLP matching & safety guardrails
+│   ├── App.jsx                        # Root page component & layout orchestrator
+│   ├── index.css                      # Tailwind directives & global styling rules
+│   └── main.jsx                       # Application entry point
+├── tests/                             # Automated test suites
+│   ├── assistant-engine.test.js       # Wellness assistant query routing & safety tests
+│   ├── prototype-logic.test.js        # Serving math, pricing & citation integrity tests
+│   ├── responsive-and-ui.test.js      # Quality bar, DOM integrity & layout tests
+│   └── reviews-section.test.js        # Review filtering, search, sorting & form validation
+├── docs/                              # CRO strategy, testing plan & architecture specs
+├── .gitignore                         # Build, dependency & secret exclusion rules
+├── index.html                         # HTML5 template with Google Fonts configuration
+├── package.json                       # Dependencies, scripts & project metadata
+├── postcss.config.js                  # PostCSS plugins configuration
+├── tailwind.config.js                 # Custom theme, colors & font family definitions
+└── vite.config.js                     # Vite build & plugin settings
 ```
 
 ---
 
-## 4. Documentation Index
+## 8. Current Prototype Limitations & Transparency Disclosures
 
-| Document | Primary Focus | Key Deliverable |
-| :--- | :--- | :--- |
-| [evidence-template.md](file:///d:/downloads/collagen-cro-optimization/research/evidence-template.md) | Research Standards | Standardized template separating facts, external literature with URLs, assumptions, and hypotheses with a worked reference example. |
-| [product-teardown.md](file:///d:/downloads/collagen-cro-optimization/research/product-teardown.md) | UX & Heuristic Audit | Detailed component analysis of the live PDP, evaluating cognitive load, trust signals, and mobile friction. |
-| [sources-and-benchmarks.md](file:///d:/downloads/collagen-cro-optimization/research/sources-and-benchmarks.md) | Ground Truth & Benchmarks | Scientific validation of `<1000 Da` peptides (PMID: [29949889](https://pubmed.ncbi.nlm.nih.gov/29949889/)), clinical timelines (PMID: [33742449](https://pubmed.ncbi.nlm.nih.gov/33742449/)), and benchmarks with explicit non-conflation guardrails. |
-| [customer-journey.md](file:///d:/downloads/collagen-cro-optimization/docs/customer-journey.md) | User Journey Mapping | 3 heuristic mental models (unvalidated hypotheses), end-to-end PDP interaction flow, and data requirements for drop-off telemetry. |
-| [cro-prioritisation.md](file:///d:/downloads/collagen-cro-optimization/docs/cro-prioritisation.md) | Growth Prioritization | Calibrated 1–10 ICE scoring rubric and backlog of 6 CRO initiatives with pre-analytics uncertainty adjustments. |
-| [ab-testing-plan.md](file:///d:/downloads/collagen-cro-optimization/docs/ab-testing-plan.md) | Experimentation Blueprint | Statistically consistent multi-arm test plan with Bonferroni multiplicity correction, guardrail metrics, and variant specs. |
-| [prototype-roadmap.md](file:///d:/downloads/collagen-cro-optimization/docs/prototype-roadmap.md) | Engineering & Prototype Plan | Phased roadmap for building a responsive React 18 + Vite prototype with an interactive A/B variant switcher. |
-| [prototype-spec.md](file:///d:/downloads/collagen-cro-optimization/docs/prototype-spec.md) | Functional Specification | Viewport definitions, content hierarchy, interaction logic, WCAG 2.1 AA accessibility & test cases. |
+> [!IMPORTANT]
+> **Data Authenticity & Consumer Protection Standards**
+> 
+> To uphold strict academic rigor and prevent consumer deception, this prototype distinguishes between verified brand data and prototype demonstration features:
 
----
-
-## 5. Summary of Calibrated CRO Hypotheses
-
-Our calibrated ICE prioritization ranks the top immediate interventions as follows:
-
-| ID | Initiative | Calibrated ICE Score | Priority | Core Mechanism |
-| :---: | :--- | :---: | :---: | :--- |
-| **H-03** | **Persistent Sticky Mobile Bottom CTA** | **7.67** | P0 | Keeps selected pack, live price, and "Add to Cart" affordance within thumb reach during deep educational scrolling. |
-| **H-01** | **Value-Per-Serving + Neutral Sensory Callout** | **7.67** | P0 | Displays "Only ~₹68/day (25 servings)" beside total price and adds a verified unflavored/neutral mixing callout above CTA. |
-| **H-06** | **Unified Purity & Certification Trust Strip** | **7.33** | P1 | Consolidates Wild Fish, Mercury-Free, US FDA Registered Facility, and FSSAI credentials beneath hero. |
-| **H-02** | **Pack Selector Restructuring & Savings Anchoring** | **7.00** | P1 | Clarifies pack savings with prominent "Best Value - Save ₹400" badging to boost Average Order Value (AOV). |
-| **H-04** | **Visual Molecular Absorption Explainer (`<1000 Da`)** | **6.67** | P2 | Translates abstract Dalton numbers into an intuitive visual comparison against standard 3000-5000 Da collagens. |
-| **H-05** | **Sensory Dissolution Micro-Video Proof** | **5.67** | P2 | Visual proof of a single scoop dissolving instantly in water with zero clumping or cloudiness. |
-
----
-
-## 6. How to Verify & Review This Foundation
-
-Follow these steps to inspect and verify the repository assets:
-
-1. **Verify File Structure:**
-   Run the following PowerShell command in the repository root:
-   ```powershell
-   Get-ChildItem -Recurse -File | Select-Object FullName
-   ```
-
-2. **Inspect Research Templates & Standards:**
-   - Review [evidence-template.md](file:///d:/downloads/collagen-cro-optimization/research/evidence-template.md) to confirm clear segregation between facts, external literature with source URLs, assumptions, and hypotheses.
-   - Review [sources-and-benchmarks.md](file:///d:/downloads/collagen-cro-optimization/research/sources-and-benchmarks.md) to verify that internal metrics are labeled `[Baseline Needed]` and clinical claims are backed by PMIDs.
-
-3. **Inspect Heuristic Audit & Journey Map:**
-   - Cross-check [product-teardown.md](file:///d:/downloads/collagen-cro-optimization/research/product-teardown.md) against the live [Wellbeing Nutrition PDP](https://wellbeingnutrition.com/products/korean-marine-collagen-peptides).
-   - Review [customer-journey.md](file:///d:/downloads/collagen-cro-optimization/docs/customer-journey.md) to verify that customer profiles are transparently marked as unvalidated heuristic mental models.
-
-4. **Verify Prioritization & Statistical Consistency:**
-   - Inspect the calibrated ICE scoring rubric in [cro-prioritisation.md](file:///d:/downloads/collagen-cro-optimization/docs/cro-prioritisation.md).
-   - Inspect the statistical power formulas ($\alpha=0.05, \beta=0.20$), Bonferroni correction ($\alpha'=0.025$), and sample size tables in [ab-testing-plan.md](file:///d:/downloads/collagen-cro-optimization/docs/ab-testing-plan.md).
-
-5. **Review Git & Security Configuration:**
-   - Confirm [.gitignore](file:///d:/downloads/collagen-cro-optimization/.gitignore) explicitly excludes `.env`, `node_modules/`, `dist/`, and secrets.
-
----
-
-## 7. Customer-First Journey & Prototype Verification Guide
-
-The responsive React 18 + Vite prototype implements a customer-centric sequence designed around education and natural purchase discovery:
-
-1. **Hero & Immediate Purchase Access:** [`EditorialHero.jsx`](file:///d:/downloads/collagen-cro-optimization/src/components/EditorialHero.jsx) — Warm, human headline (*“A little care for the skin you're in.”*), friendly jargon-free explanation, 3 simple benefit themes, official 1080×1080 photography, and a **compact purchase panel placed directly below the product image in normal document flow** with verified price (₹1,699 for 25 servings @ ₹68/day), pack selector, quantity steppers, and side-by-side **Add to Cart** and **Buy Now** buttons. When scrolling past the hero, the purchase panel scrolls away naturally with zero fixed/sticky locking.
-2. **Relatable Benefits:** [`BenefitsDeepDive.jsx`](file:///d:/downloads/collagen-cro-optimization/src/components/BenefitsDeepDive.jsx) — 3 human-centred chapters (*“Support for healthy-looking skin”*, *“Care for your hair and nails”*, *“Collagen for your everyday routine”*) answering 3 customer questions: (1) what collagen does in the body, (2) what research suggests, and (3) what to realistically expect.
-3. **The Science Behind Collagen:** [`ScienceAbsorption.jsx`](file:///d:/downloads/collagen-cro-optimization/src/components/ScienceAbsorption.jsx) & [`ClinicalTimeline.jsx`](file:///d:/downloads/collagen-cro-optimization/src/components/ClinicalTimeline.jsx) — Optional deep-dive for curious customers covering nano-hydrolysis (<1000 Da), Dalton spectrum, and methodological distinction between ingredient literature and commercial product.
-4. **Build Trust & Verify Specs:** [`TrustStrip.jsx`](file:///d:/downloads/collagen-cro-optimization/src/components/TrustStrip.jsx) — Formulation monograph, FSSAI, US FDA facility, non-detectable mercury batch testing.
-5. **Explore Genuine Reviews:** [`ReviewsSection.jsx`](file:///d:/downloads/collagen-cro-optimization/src/components/ReviewsSection.jsx) — Authenticated aggregate 4.6/5.0 score across 1,420+ evaluations, sentiment focus areas, and review ingestion protocol.
-6. **Everyday Routine & Inquiries:** [`UsageMixability.jsx`](file:///d:/downloads/collagen-cro-optimization/src/components/UsageMixability.jsx) & FAQs — Daily preparation in hot/cold liquids, 8g scoop measure, and nutritional breakdown.
-7. **Verified Delivery & Returns Policy:** Transparently communicated across three friction touchpoints: hero purchase panel badge with direct anchor jump, an expandable policy accordion in product monographs, and cart drawer checkout reassurance detailing the 48-hour damaged/defective reporting window and food-grade hygiene standards.
-8. **Clean Navigation:** [`Header.jsx`](file:///d:/downloads/collagen-cro-optimization/src/components/Header.jsx) — Simple customer-facing labels: *Benefits*, *Ingredients & Science*, *Reviews*, *How to Use*.
-9. **Interactive Wellness Shopping Assistant (Phase 3):** [`WellnessAssistant.jsx`](file:///d:/downloads/collagen-cro-optimization/src/components/WellnessAssistant.jsx) & [`assistantEngine.js`](file:///d:/downloads/collagen-cro-optimization/src/utils/assistantEngine.js) — A fixed circular launcher (`Ask our Wellness Assistant`) that opens an interactive, accessible concierge dialog. Grounded entirely in verified product data (`src/data/productData.js`), it answers inquiries on pure ingredients, pack pricing/serving math, consumption ritual, and official 48-hour return policies with direct section jump links. Strictly implements medical safety disclosures (recommending physician consultation for pregnancy, fish allergies, or health conditions) and is clearly labeled as a transparent local demo rule-based system without simulated live AI dependencies.
-
-### Verification Commands:
-
-1. **Run Dual Integrity & Quality Bar Tests:**
-   ```bash
-   npm test
-   ```
-   *Expected outcome:* Validates serving math, PubMed citations, compliance, absence of fake claims/guarantees, warm hero copy, purchase panel under image in normal flow, human benefits structure, Delivery & Returns policy, and the complete Phase 3 Wellness Assistant engine & UI.
-
-2. **Run Production Build Check:**
-   ```bash
-   npm run build
-   ```
-   *Expected outcome:* Compiles into `dist/` with 0 errors in under 5 seconds.
-
-3. **Launch Local Development Server:**
-   ```bash
-   npm run dev
-   ```
-   *Expected outcome:* Starts local development server on `http://localhost:3000`.
-
-4. **Launch Production Preview:**
-   ```bash
-   npm run preview
-   ```
-   *Expected outcome:* Previews the optimized production bundle locally.
+1. **Customer Reviews Disclosure:**
+   * **Verified Benchmark:** The overall rating of **4.74 / 5.0** and the count of **571 verified reviews** represent Wellbeing Nutrition's published customer satisfaction benchmarks across official digital touchpoints.
+   * **Individual Review Comments:** The individual customer review cards displayed on the page are **clearly identified sample prototype content** (`Sample Review — Prototype Only`). They illustrate the layout hierarchy, typography, keyword search, rating filters, and pagination. They **do not represent real customer testimonials, genuine customer identities, or confirmed biological results**.
+   * **Live Stream Ingestion:** An explicit status banner discloses: `"Live Review Stream: Integration Pending. Real Customer Reviews Will Stream Here Once Connected to live verified-order webhooks."`
+2. **Review Submission Simulation:**
+   * Submissions made via the "Write a Review" modal undergo client-side validation and are prepended to the local session state so evaluators can test the flow. Submissions are not transmitted to or stored in a persistent production database.
+3. **E-Commerce Checkout Simulation:**
+   * The "Add to Cart" and "Buy Now" buttons trigger the interactive cart drawer with dynamic price calculations and pack switching. Payment gateway APIs (e.g. Razorpay, Shopify Pay) are not connected.
+4. **Wellness Assistant Architecture:**
+   * The assistant is a local, deterministic, rule-based concierge running directly in the browser. It relies strictly on verified data in `productData.js` and does not transmit customer queries to external generative AI services or third-party servers.
+5. **Delivery & Returns Disclosures:**
+   * Shipping timelines (2–4 business days pan-India) and the 48-hour damaged/defective claims policy match official brand documentation. Opened food-grade ingestibles are exempt from routine returns for health and hygiene safety.
