@@ -6,6 +6,14 @@ ehthumbs.db
 Desktop.ini
 .DS_Store
 
+# Dependencies & Build Outputs
+node_modules/
+dist/
+dist-ssr/
+*.env
+*.env.*
+!.env.example
+
 # Editor directories and files
 .idea/
 .vscode/
